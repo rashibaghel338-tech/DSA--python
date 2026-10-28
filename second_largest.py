@@ -1,15 +1,31 @@
-a=[2,4,5,1,0,10,100,8]
-largest=a[0]
-second_largest=0  
-for i in a:
-  if largest<i:
-    second_largest=largest
-    largest=i
-  elif i>second_largest and i<largest:
-    second_largest=i
-if second_largest == a[0]:
+a = [5,5,5]
+lar_num = a[0]
+sec_num = float('-inf')
+
+for i in range(len(a)):
+    if a[i] > lar_num:
+        sec_num = lar_num
+        lar_num = a[i]
+
+    elif a[i] < lar_num and a[i] > sec_num:
+        sec_num = a[i]
+if sec_num == float('-inf'):
     print("No second-largest distinct number")
 else:
-    print(second_largest)    
- 
-  
+    print("Second largest:", sec_num)      
+
+print("Largest:", lar_num)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
